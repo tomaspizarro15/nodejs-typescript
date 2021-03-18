@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start-dev": "nodemon --exec ts-node ./bin/api.ts",
+    "start:qa": "nodemon --exec ts-node ./bin/api.ts NODE_ENV=qa",
+    "start:dev": "nodemon --exec ts-node ./bin/api.ts NODE_ENV=development",
     "start": "ts-node ./bin/api.ts"
   },
   "author": "Tomas Pizarro",
   "license": "MIT",
   "devDependencies": {
+    "@types/config": "0.0.38",
+    "config": "^3.3.6",
+    "config.ts": "^1.0.0",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.7"
   },
   "dependencies": {
